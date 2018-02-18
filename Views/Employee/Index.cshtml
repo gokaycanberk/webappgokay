@@ -1,0 +1,52 @@
+@model IEnumerable<WebAppGokay.Models.Employees>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p class="float-right">
+    <a asp-action="Create" class="btn btn-success">Create New</a>
+</p>
+<h2>Employee List</h2>
+<table class="table table-hover">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.City)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Department)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Salary)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salary)
+            </td>
+            <td>
+                <a asp-action="Edit" class="btn btn-primary" asp-route-id="@item.Id" title="Edit"><i class="fa fa-edit"></i></a>
+                <a asp-action="Details" class="btn btn-info" asp-route-id="@item.Id" title="View"><i class="fa fa-eye"></i></a>
+                <a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.Id" title="Remove"><i class="fa fa-trash"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

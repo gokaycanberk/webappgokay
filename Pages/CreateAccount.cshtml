@@ -1,0 +1,25 @@
+﻿@page
+@model CreateAccountModel
+@{
+    ViewData["Title"] = "Create an Account";
+}
+
+
+<div class="container">
+    <div class="alerts">
+        <div class="alert alert-danger hidden" role="alert">
+            <strong>Oh snap!</strong> Something went wrong. Email already exist.
+        </div>
+        <div class="alert alert-success hidden" role="alert">
+            <strong>Well done!</strong> You successfully created an account
+        </div>
+    </div>
+    <form class="form form-create">
+        <h2 class="form-signin-heading">Create an Account</h2>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" required="required" placeholder="Email address" autofocus="">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" required="required" placeholder="Password">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button>
+    </form>
+</div>
