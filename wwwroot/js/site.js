@@ -15,7 +15,7 @@ $(function () {
                 _this = this;
 
             if (token) {
-                console.log('JWT: ' + token);
+                console.log('JSON Web Token: ' + token);
                 $.ajax({
                     type: 'GET',
                     url: '/users/authenticate',

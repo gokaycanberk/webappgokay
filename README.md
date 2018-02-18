@@ -3,3 +3,6 @@
 - Click RUN
 
 That's all :)
+
+TIP: For the initial use, click the "Create a new account"  to create a dummy account. Then use that account to login. 
+Check the Chrome Dev Console for the generated JWT upon successfull login.
